@@ -72,7 +72,7 @@ const createTasksListHTML = () => {
 
 /* ----------========== WHEN PAGE IS LOAD PAGE GET LOCALSTORAGE ==========---------- */
 // Check if there is data stored
-todoListArray = getLocalStorage(todoListArray);
+todoListArray = getLocalStorage();
 
 // create HTML when page loaded
 createTasksListHTML();
