@@ -1,12 +1,16 @@
-export const setLocalStorage = () => { localStorage.setItem('data', JSON.stringify(todoList.tasks)); }
+export const setLocalStorage = (arrayStorage) => {
+  localStorage.setItem('data', JSON.stringify(arrayStorage));
+  return;
+};
 
-export const reloadPage = () => { document.location.reload(); }
+export const reloadPage = () => { document.location.reload(); };
 
-export const getLocalStorage = ( arrayStorage) => {
+export const getLocalStorage = (arrayStorage) => {
   if (localStorage.getItem('data') !== null) {
-    return arrayStorage = JSON.parse(localStorage.getItem('data'));
+    JSON.parse(localStorage.getItem('data'));
+    return;
   } else {
-    return arrayStorage = [];
-  }
-}
-
+    arrayStorage = [];
+    return;
+  };
+};
