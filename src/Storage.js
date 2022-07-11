@@ -4,10 +4,10 @@ export const setLocalStorage = (arrayStorage) => {
 
 export const reloadPage = () => { document.location.reload(); };
 
-export const getLocalStorage = (arrayStorage) => {
+export const getLocalStorage = () => {
   if (localStorage.getItem('data') !== null) {
-    JSON.parse(localStorage.getItem('data'));
+    return JSON.parse(localStorage.getItem('data'));
   } else {
-    arrayStorage = [];
+    return [];
   }
 };
