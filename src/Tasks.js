@@ -23,15 +23,13 @@ export default class Tasks {
   // task Done
   taskDone = (index) => {
     index -= 1;
-    let bool = this.tasks[index].completed;
-    bool = !bool;
-    this.tasks[index].completed = bool;
+    this.tasks[index].completed = !this.tasks[index].completed;
   };
 
   // Delete all completed (called in UI by - clear All completed button)
   clearCompleted = () => {
     this.tasks.forEach(() => {
-      this.tasks = this.tasks.filter((task) => task.completed !== true);
+      this.tasks = this.tasks.filter((task) => task.completed);
     });
     this.tasks.forEach((element, newIndex) => {
       element.index = newIndex + 1;
